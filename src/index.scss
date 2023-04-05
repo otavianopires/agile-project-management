@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-100;
+  @apply leading-7 bg-slate-200;
+}
+
+p {
+  @apply mb-7;
 }

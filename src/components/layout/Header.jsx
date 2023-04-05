@@ -1,13 +1,13 @@
 const Header = ({ handleMenuClick }) => {
 
   return (
-    <header className="header h-16 px-6 grid grid-cols-header items-center gap-5 bg-slate-100 border-b border-solid border-slate-300">
+    <header className="header z-10 fixed h-16 w-full px-4 lg:px-6 grid grid-cols-header items-center gap-5 bg-white border-b border-solid border-slate-300">
       <button
         data-drawer-target="logo-sidebar"
         data-drawer-toggle="logo-sidebar"
         aria-controls="logo-sidebar"
         type="button"
-        className="inline-flex items-center p-2 text-sm text-gray-500 rounded-md md:hidden hover:bg-slate-300"
+        className="inline-flex items-center p-2 text-sm text-gray-500 rounded-md lg:hidden hover:bg-slate-300"
         onClick={handleMenuClick}
       >
         <span className="sr-only">Open sidebar</span>
@@ -16,7 +16,7 @@ const Header = ({ handleMenuClick }) => {
         </svg>
       </button>
 
-      <h1 className="font-bold uppercase flex gap-3 justify-self-center md:justify-self-start">
+      <h1 className="font-bold uppercase flex gap-3 justify-self-center mr-10 lg:mr-0 lg:justify-self-start">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 fill-slate-500">
           <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
           <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />

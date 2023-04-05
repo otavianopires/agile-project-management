@@ -1,6 +1,6 @@
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
-import Board from "./components/layout/Board";
+import Board from "./components/elements/Board";
 import { useState } from "react";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-      <div className="md:ml-60">
+      <div className="lg:ml-60">
         <Header handleMenuClick={handleMenuClick} />
         <Board />
       </div>

@@ -8,6 +8,7 @@ export default {
     extend: {
       gridTemplateColumns: {
         'header': 'auto 1fr',
+        'board': '240px 240px 240px',
       }
     },
   },
