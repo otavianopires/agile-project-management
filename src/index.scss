@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply px-[15px] w-full;
+body {
+  @apply bg-slate-100;
 }
