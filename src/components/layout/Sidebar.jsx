@@ -12,6 +12,7 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
       type: 'SELECTED_BOARD',
       selected: parseInt(e.target.id)
     })
+    setShowSidebar(false);
   }
 
   return (
