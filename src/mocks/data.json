@@ -2,7 +2,7 @@
   "tasks": [
     {
       "id": 1001,
-      "title": "Lorem ipsum dolor sit amet",
+      "title": "Implement events Rest API",
       "description": "Duis non tellus tellus. Nulla facilisi. Sed est mauris, cursus et turpis sed, dictum porta ligula. Quisque nec arcu ut lectus pulvinar ullamcorper. Curabitur consectetur turpis id augue pretium, ut elementum sapien lobortis. Etiam tellus risus, posuere vitae aliquam sit amet, fringilla ut metus.",
       "status": "to-do",
       "type": "task",
@@ -11,7 +11,7 @@
     },
     {
       "id": 1002,
-      "title": "Donec nec turpis in eros",
+      "title": "Update Home page banner",
       "description": "Integer pretium dui in nibh dictum vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent viverra consequat ipsum, ido suscipit nulla vulputate non. Fusce pretium nunc cursus, pharetra diam in, ultricies purus. Proin blandit vel ipsum ac consectetur. Nunc tincidunt ipsum libero, vitae iaculis mauris tincidunt ut. Vivamus commodo nisi eget nisl rhoncus malesuada.",
       "status": "to-do",
       "type": "task",
@@ -20,25 +20,25 @@
     },
     {
       "id": 1003,
-      "title": "Morbi eu mi congue",
+      "title": "Fix bug with email package",
       "description": "Suspendisse convallis mi eu lectus feugiat, sed efficitur nisl rutrum. Fusce bibendum consectetur lectus, sed pellentesque leo sollicitudin a. Phasellus ido cursus eros. Phasellus sed nisi feugiat, imperdiet mi suscipit, pellentesque leo. Morbi at nulla aliquet, interdum lectus quis, rhoncus dui. In a porta est, ut pellentesque tortor. Proin facilisis nibh eget semper fringilla.",
       "status": "to-do",
-      "type": "task",
+      "type": "bug",
       "board": 9001,
       "user": null
     },
     {
       "id": 1004,
-      "title": "Nunc tempus nulla",
+      "title": "Create new site design",
       "description": "Sed interdum justo felis, at vehicula lectus accumsan eget. Donec fermentum risus maximus nibh sodales egestas. Proin auctor, magna tempus posuere rhoncus, eros dui vestibulum nunc, ac posuere mauris nunc at mi. Nunc rhoncus, odio ido vestibulum facilisis, diam erat posuere risus, et porta enim sem sit amet nisi. Suspendisse aliquam sem eros.",
       "status": "to-do",
-      "type": "task",
+      "type": "story",
       "board": 9003,
       "user": null
     },
     {
       "id": 1005,
-      "title": "Quisque hendrerit arcu",
+      "title": "Setup Staging environment",
       "description": "Donec eu felis ac massa vestibulum consequat. Nam tincidunt, nisl in faucibus mollis, sapien felis consectetur magna, eu cursus sem ante ac dui. Mauris consequat ante ido blandit eleifend. Etiam vehicula urna quis metus mollis, ut euismod leo tincidunt. Cras cursus urna cursus, pretium dolor ut, aliquet dui. Duis ac nisl a urna varius faucibus. Duis est odio, suscipit eget ornare ac, cursus eu nisl.",
       "status": "to-do",
       "type": "task",
@@ -47,26 +47,26 @@
     },
     {
       "id": 1006,
-      "title": "Ut sodales leo eget",
+      "title": "Events widget implementation",
       "description": "Quisque aliquet dui odio, et efficitur purus dapibus nec. Aliquam magna leo, rhoncus ido laoreet id, sodales a ipsum. Curabitur mattis quam sed lacus tincidunt, nec feugiat metus accumsan. Pellentesque aliquam at eros quis consectetur. Maecenas imperdiet ido eros in fringilla. Nullam dictum pulvinar neque vehicula vestibulum.",
       "status": "to-do",
-      "type": "task",
+      "type": "story",
       "board": 9001,
       "user": null
     },
     {
       "id": 1007,
       "code": "TM-1007",
-      "title": "Nunc pellentesque est",
+      "title": "Investigate server slowdown",
       "description": "Cras dictum dapibus tortor, non mattis sapien bibendum porta. Duis fermentum dignissim mattis. Duis malesuada ac arcu in efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at iaculis est, ac rhoncus leo. Nullam est tortor, consectetur ut ultricies ac, molestie et felis.",
       "status": "to-do",
-      "type": "task",
+      "type": "bug",
       "board": 9002,
       "user": null
     },
     {
       "id": 1008,
-      "title": "Vestibulum consequat metus",
+      "title": "Define wireframe for Products page",
       "description": "Donec scelerisque diam elementum felis mattis, at faucibus enim cursus. Vestibulum a nisl volutpat, bibendum magna vel, volutpat tortor. Duis pharetra enim lectus. Nunc at tellus tortor. Aenean laoreet ex quis libero pulvinar ullamcorper. Aliquam vehicula ut ex nec finibus. In non ornare leo, eu pulvinar diam. Proin pellentesque, lacus at mollis fermentum, massa ipsum hendrerit.",
       "status": "to-do",
       "type": "task",
@@ -75,7 +75,7 @@
     },
     {
       "id": 1009,
-      "title": "Sed pretium purus ac",
+      "title": "Update product section",
       "description": "Aliquam vehicula ut ex nec donec ac egestas diam. Donec lectus ex, consectetur a placerat sit amet, semper rhoncus diam. Mauris ut nisl arcu. Maecenas vitae ipsum consequat, molestie quam at, pharetra est. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
       "status": "to-do",
       "type": "task",
