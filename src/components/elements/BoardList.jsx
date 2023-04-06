@@ -1,11 +1,13 @@
 import TaskCard from "./TaskCard";
 
-const BoardList = ({ title }) => {
+const BoardList = ({ title, tasks }) => {
   return (
     <div>
-      <h3 className="my-3">{title} (0)</h3>
+      <h3 className="my-3 font-bold text-slate-600">{title} ({tasks.length})</h3>
       <div className="flex flex-col gap-4">
-        <TaskCard />
+        {tasks.map(task => {
+          return (<TaskCard key={task.id} task={task} />)
+        })}
       </div>
     </div>
   )

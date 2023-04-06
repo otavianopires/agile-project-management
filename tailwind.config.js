@@ -9,6 +9,7 @@ export default {
       gridTemplateColumns: {
         'header': 'auto 1fr',
         'board': '240px 240px 240px',
+        'taskDetails': 'auto 1fr',
       }
     },
   },

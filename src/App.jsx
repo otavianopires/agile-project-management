@@ -2,6 +2,7 @@ import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 import Board from "./components/elements/Board";
 import { useState } from "react";
+import { BoardProvider } from "./contexts/BoardContext";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -11,13 +12,15 @@ function App() {
     setShowSidebar(!showSidebar);
   }
   return (
-    <div className="App">
-      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
-      <div className="lg:ml-60">
-        <Header handleMenuClick={handleMenuClick} />
-        <Board />
+    <BoardProvider>
+      <div className="App">
+        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
+        <div className="lg:ml-60">
+          <Header handleMenuClick={handleMenuClick} />
+          <Board />
+        </div>
       </div>
-    </div>
+    </BoardProvider>
   )
 }
 

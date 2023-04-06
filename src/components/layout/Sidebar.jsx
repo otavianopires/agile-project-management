@@ -1,32 +1,44 @@
 import { createPortal } from "react-dom";
 import Backdrop from "../elements/Backdrop";
+import { useBoard, useBoardDispatch } from "../../contexts/BoardContext";
+import BoardRadio from "../elements/BoardRadio";
 
 const Sidebar = ({ showSidebar, setShowSidebar }) => {
+  const { board } = useBoard();
+  const { dispatchBoard } = useBoardDispatch();
+
+  const handleBoardChange = (e) => {
+    dispatchBoard({
+      type: 'SELECTED_BOARD',
+      selected: parseInt(e.target.id)
+    })
+  }
+
   return (
     <>
       <aside
         aria-label="Sidebar"
-        className={`sidebar fixed top-0 left-0 z-20 w-60 h-screen bg-slate-500 text-white transition-transform lg:translate-x-0 ${!showSidebar ? '-translate-x-full' : 'transform-none'}`}>
+        className={`sidebar fixed top-0 left-0 z-20 w-60 h-screen bg-slate-200 border-r border-solid border-slate-300 transition-transform lg:translate-x-0 ${!showSidebar ? '-translate-x-full' : 'transform-none'}`}>
         <div className="inner-sidebar overflow-y-scroll h-full p-6">
           <h3 className="font-bold mb-6 text-md">Board Selection</h3>
-          <div className="board-selection flex flex-col gap-2">
-            <div>
-              <input type="radio" id={`board-0`} name="board" value="0" className="peer/board-0 form-radio mr-2 mb-0.5" />
-              <label htmlFor={`board-0`} className="peer-checked/board-0:text-white text-slate-300 font-medium">All Boards</label><br></br>
-            </div>
-            <div>
-              <input type="radio" id={`board-1`} name="board" value="1" className="peer/board-1 form-radio mr-2 mb-0.5" />
-              <label htmlFor={`board-1`} className="peer-checked/board-1:text-white text-slate-300 font-medium">Dev Board</label><br></br>
-            </div>
-            <div>
-              <input type="radio" id={`board-2`} name="board" value="2" className="peer/board-2 form-radio mr-2 mb-0.5" />
-              <label htmlFor={`board-2`} className="peer-checked/board-2:text-white text-slate-300 font-medium">IT Board</label><br></br>
-            </div>
-            <div>
-              <input type="radio" id={`board-3`} name="board" value="3" className="peer/board-3 form-radio mr-2 mb-0.5" />
-              <label htmlFor={`board-3`} className="peer-checked/board-3:text-white text-slate-300 font-medium">UI/UX Board</label><br></br>
-            </div>
-          </div>
+          <fieldset className="board-selection flex flex-col gap-4">
+            <BoardRadio key={0} board={{id: 0, name: 'All Boards'}} selected={board.selected} onChange={handleBoardChange} />
+            {
+              board.boards.sort((a, b) => {
+                if (a.name < b.name) {
+                  return -1;
+                }
+                if (a.name > b.name) {
+                  return 1;
+                }
+                return 0;
+              }).map(boardItem => {
+                return (
+                  <BoardRadio key={boardItem.id} board={boardItem} selected={board.selected} onChange={handleBoardChange} />
+                )
+              })
+            }
+          </fieldset>
         </div>
       </aside>
 

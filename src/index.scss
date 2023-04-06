@@ -3,9 +3,33 @@
 @tailwind utilities;
 
 body {
-  @apply leading-7 bg-slate-200;
+  @apply leading-7 bg-slate-100;
 }
 
 p {
   @apply mb-7;
+}
+
+.form-radio {
+  @apply
+    rounded-full
+    p-0
+    appearance-none
+    inline-block
+    align-middle
+    box-border
+    h-4
+    w-4
+    bg-white
+    border
+    border-solid
+    border-slate-400;
+
+  &:checked {
+    @apply inline-flex items-center justify-center bg-sky-600 border-sky-600;
+    &::before {
+      content: "";
+      @apply block w-[7px] h-[7px] bg-white rounded-full;
+    }
+  }
 }
